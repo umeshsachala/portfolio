@@ -5,7 +5,7 @@
   <title>Umesh Sachala | Flutter Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- AOS animation -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -22,16 +22,24 @@
       padding: 40px 20px;
     }
 
-    h1 { font-size: 42px; }
-    h2 { color: #38bdf8; }
+    h1 { font-size: 40px; margin-bottom: 10px; }
+    h2 { color: #38bdf8; margin-top: 0; }
     h3 { margin-bottom: 10px; }
 
-    section {
-      margin-bottom: 80px;
-    }
+    section { margin-bottom: 80px; }
 
+    /* HERO */
     .hero {
       text-align: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
     }
 
     .buttons a {
@@ -41,20 +49,24 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
-      color: #000;
       background: #38bdf8;
+      color: #000;
+      transition: transform .3s;
     }
 
-    .buttons a.outline {
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    .buttons .outline {
       background: transparent;
       color: #38bdf8;
       border: 2px solid #38bdf8;
     }
 
-    ul li {
-      margin: 8px 0;
-    }
+    ul li { margin: 8px 0; }
 
+    /* CARDS */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -66,11 +78,12 @@
       padding: 20px;
       border-radius: 12px;
       text-align: center;
-      transition: transform .3s;
+      transition: transform .3s, box-shadow .3s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
     }
 
     footer {
@@ -78,6 +91,8 @@
       opacity: .7;
       font-size: 14px;
     }
+
+    a { color: #38bdf8; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -86,15 +101,19 @@
 
   <!-- HERO -->
   <section class="hero" data-aos="fade-up">
+    <!-- Upload your photo as profile.jpg -->
+    <img src="profile.jpg" alt="Umesh Sachala" class="profile-img">
+
     <h1>Hi, I’m Umesh Sachala</h1>
     <h2>Flutter Developer | 3+ Years Experience</h2>
+
     <p>
-      I build high-quality Flutter apps for Android and iOS.
-      From idea to Play Store & App Store deployment.
+      I build scalable, high-performance Flutter applications for
+      Android & iOS. From idea to Play Store & App Store deployment.
     </p>
 
     <div class="buttons">
-      <a href="#projects">View Projects</a>
+      <a href="resume.pdf" target="_blank">Download Resume</a>
       <a href="#contact" class="outline">Hire Me</a>
     </div>
   </section>
@@ -103,9 +122,9 @@
   <section data-aos="fade-up">
     <h3>About Me</h3>
     <p>
-      Flutter Developer with 3+ years of experience in production-ready
-      applications. Strong in state management, Firebase, clean UI,
-      and scalable architecture.
+      Flutter Developer with 3+ years of experience in real-world
+      production applications. Strong expertise in state management,
+      Firebase, clean architecture, API integrations, and smooth UI/UX.
     </p>
   </section>
 
@@ -123,21 +142,24 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" data-aos="fade-up">
+  <section data-aos="fade-up">
     <h3>Projects</h3>
     <div class="cards">
-      <div class="card">Business & Management Apps</div>
-      <div class="card">Firebase Based Applications</div>
-      <div class="card">Admin Dashboards</div>
+      <div class="card">WalletFlow – Expense & Income Tracker</div>
+      <div class="card">RMS Hospital – Healthcare Management App</div>
+      <div class="card">CleanService – On-Demand Service App</div>
+      <div class="card">DoorHub – Delivery Platform</div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" data-aos="fade-up">
     <h3>Contact</h3>
-    <p>Email: yourmail@gmail.com</p>
-    <p>GitHub: github.com/yourusername</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>📧 Email: <a href="mailto:umesh.sachala@gmail.com">umesh.sachala@gmail.com</a></p>
+    <p>📞 Phone: <a href="tel:+917283904450">+91 72839 04450</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/917283904450" target="_blank">Chat Now</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/umeshsachala" target="_blank">linkedin.com/in/umeshsachala</a></p>
+    <p>💻 GitHub: <a href="https://github.com/umeshsachala" target="_blank">github.com/umeshsachala</a></p>
   </section>
 
   <footer>
@@ -149,7 +171,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 800,
+    duration: 900,
     once: true
   });
 </script>
